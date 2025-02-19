@@ -11,9 +11,9 @@ function fish_prompt_get_right_prompt --description 'Get right prompt content'
         set_color $cl_empress -b $cl_gorse
         printf ''
         set_color normal -b $cl_empress
-        printf ' %s' (fish_git_prompt '%s')
+        printf '%s' (fish_git_prompt '%s')
         set_color normal
     else
-        printf ' '
+        printf ''
     end
 end
