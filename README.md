@@ -1,11 +1,8 @@
 # Neovim Config
 
 Applications used: 
-- Alacritty
+- ghostty
 - Tmux
 - Fish
 - Neovim
-
-## Installation
-
-Install neovim 0.9.x from the appimage
+- i3
