@@ -1,8 +1,9 @@
 # Neovim Config
 
 Applications used: 
-- ghostty
+- i3
+- Dunst
+- Ghostty
 - Tmux
 - Fish
 - Neovim
-- i3
