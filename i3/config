@@ -14,11 +14,11 @@ assign [class="^apple-music-for-linux$"] 2:II
 assign [class="^steam$"] 3:III
 
 # autostart
-exec --no-startup-id hsetroot -cover ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-scale "~/Pictures/wallpaper.png"
 exec --no-startup-id "solaar --window=hide"
 
 # start dmenu (a program launcher)
-bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i \
+bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
 -fn 'Poppins:size=13' -nb '#191724' -nf '#e0def4' \
 -sb '#f6c177' -sf '#191724'"
 
@@ -97,7 +97,7 @@ bindsym $super+r mode "resize"
 # panel
 bar {
 	status_command i3status
-	position top
+	position bottom
 	workspace_min_width 24
 	padding 2px 8px 2px 8px
 	strip_workspace_numbers yes
@@ -125,8 +125,6 @@ client.placeholder #191724 #b08500 #93a1a1 #263640 #263640
 client.background #191724
 
 # window rules, you can find the window class using xprop
-for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] floating enable
-for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] focus
 for_window [class=".*"] border pixel 4
 hide_edge_borders smart
 gaps inner 12
