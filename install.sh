@@ -14,6 +14,7 @@ fi
 # neovim
 # ghostty
 # fish
+# dunst
 #
 # opera
 # apple music
@@ -82,6 +83,14 @@ if [ -d "${fishconfig}" ]; then
   rm -rf ${fishconfig}
   mkdir ${fishconfig}
   cp -l ./fish/config.fish ~/.config/fish/config.fish
-  cp -l ./fish/fish_prompt.fish ~/.config/fish/fish_prompt.fish
+  cp -l ./fish/prompt.fish ~/.config/fish/prompt.fish
   cp -l ./fish/fish_variables ~/.config/fish/fish_variables
+fi
+
+# Dunst
+dunstconfig="/home/${user}/.config/dunst/"
+if [ -d "${dunstconfig}" ]; then
+  rm -rf ${dunstconfig}
+  mkdir ${dunstconfig}
+  cp -l ./dunst/dunstrc ~/.config/dunst/dunstrc
 fi

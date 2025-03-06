@@ -15,6 +15,7 @@ assign [class="^steam$"] 3:III
 
 # autostart
 exec --no-startup-id feh --bg-scale "~/Pictures/wallpaper.png"
+exec --no-startup-id dunst &
 exec --no-startup-id "solaar --window=hide"
 
 # start dmenu (a program launcher)
