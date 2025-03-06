@@ -41,6 +41,12 @@ if [ ! -d "${config}" ]; then
   mkdir ${config}
 fi
 
+# set wallpaper
+# install feh
+wallpaper="${config}/wallpaper.png"
+cp -f ./wallpaper.png ${wallpaper}
+feh --bg-scale ${wallpaper}
+
 # i3 configs
 i3config="/home/${user}/.config/i3/"
 if [ -d "${i3config}" ]; then

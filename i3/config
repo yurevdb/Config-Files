@@ -3,7 +3,7 @@ set $super Mod4
 set $alt Mod1
 
 # set font
-font pango:Ionicons 9, Poppins Regular 9
+font pango:Ionicons 11, Poppins Regular 11
 
 # use mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
@@ -14,13 +14,13 @@ assign [class="^apple-music-for-linux$"] 2:II
 assign [class="^steam$"] 3:III
 
 # autostart
-exec --no-startup-id feh --bg-scale "~/Pictures/wallpaper.png"
+exec --no-startup-id feh --bg-scale "~/.config/wallpaper.png"
 exec --no-startup-id dunst &
 exec --no-startup-id "solaar --window=hide"
 
 # start dmenu (a program launcher)
 bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
--fn 'Poppins:size=13' -nb '#191724' -nf '#e0def4' \
+-fn 'Poppins:size=16' -nb '#191724' -nf '#e0def4' \
 -sb '#f6c177' -sf '#191724'"
 
 # exit i3
@@ -28,7 +28,7 @@ bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i
 
 # common apps keybinds
 bindsym $super+Return exec ghostty
-bindsym $super+l exec i3lock -i ~/Pictures/wallpaper.jpg
+bindsym $super+l exec i3lock -i ~/.config/wallpaper.png
 bindsym $super+w exec opera
 bindsym $super+e exec thunar
 
