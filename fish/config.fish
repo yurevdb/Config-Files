@@ -60,4 +60,4 @@ alias vim="nvim"
 # Prevent directories names from being shortened
 set fish_prompt_pwd_dir_length 0
 # fish_prompt defined in ~/.config/fish/functions/fish_prompt.fish
-source ~/.config/fish/fish_prompt.fish
+source ~/.config/fish/prompt.fish

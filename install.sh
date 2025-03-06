@@ -7,6 +7,31 @@ if [ $yn = [Nn]* ]; then
   exit 1
 fi
 
+# Install script
+#
+# i3
+# tmux
+# neovim
+# ghostty
+# fish
+#
+# opera
+# apple music
+# steam
+# solaar: logitech mouse
+# thunar
+# htop
+# neofech
+# 
+# go
+# gopls
+# clang
+# clangd
+# zig
+# zls
+# rust
+# rust-analyzer
+
 user="$(whoami)"
 
 # Check if the ~/.config directory exists
