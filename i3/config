@@ -49,10 +49,10 @@ bindsym $super+Up focus up
 bindsym $super+Right focus right
 
 # move focused window
-bindsym $super+Shift+Left move left
-bindsym $super+Shift+Down move down
-bindsym $super+Shift+Up move up
-bindsym $super+Shift+Right move right
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
 
 # split in horizontal or vertical orientation
 bindsym $super+h split h
@@ -132,7 +132,7 @@ client.placeholder #191724 #b08500 #93a1a1 #263640 #263640
 client.background #191724
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 1
 hide_edge_borders smart
-gaps inner 12
+gaps inner 6
 smart_gaps on
