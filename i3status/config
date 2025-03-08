@@ -11,7 +11,7 @@ order += "time"
 
 volume master {
 	format = "<span background='#191724' foreground='#e0def4'>   %volume </span>"
-	format_muted = "<span background='#191724' foreground='#e0def4'>   Muted </span>"
+	format_muted = "<span background='#191724' foreground='#e0def4'>  Muted </span>"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
