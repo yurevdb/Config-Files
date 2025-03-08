@@ -1,11 +1,17 @@
 #!/bin/bash
 
-echo "This will remove the directories for the configs of i3, i3status, tmux, ghostty and fish."
+echo "This install script will override the config files for i3, tmux, neovim, ghostty, fish and dunst."
 echo "Backup your existsing configs in a different place to be safe."
 read -p "Do you want to continue? [y/n]: " yn
 if [ $yn = [Nn]* ]; then
   exit 1
 fi
+
+user="$(whoami)"
+
+#############################################
+### INSTALL PACKAGES
+#############################################
 
 # Install script
 #
@@ -33,7 +39,9 @@ fi
 # rust
 # rust-analyzer
 
-user="$(whoami)"
+#############################################
+### CONFIG FILES 
+#############################################
 
 # Check if the ~/.config directory exists
 config="/home/${user}/.config/"
@@ -49,54 +57,49 @@ feh --bg-scale ${wallpaper}
 
 # i3 configs
 i3config="/home/${user}/.config/i3/"
-if [ -d "${i3config}" ]; then
-  rm -rf ${i3config}
+if [ ! -d "${i3config}" ]; then
   mkdir ${i3config}
-  cp -l ./i3/config ~/.config/i3/config
 fi
+cp -lf ./i3/config ~/.config/i3/config
+
 i3statuconfigs="/home/${user}/.config/i3status/"
-if [ -d "${i3statusconfig}" ]; then
-  rm -rf ${i3statusconfig}
+if [ ! -d "${i3statusconfig}" ]; then
   mkdir ${i3statusconfig}
-  cp -l ./i3status/config ~/.config/i3status/config
 fi
+cp -lf ./i3status/config ~/.config/i3status/config
 
 # Tmux
 rm "/home/${user}/.tmux.conf"
-cp -l ./tmux/.tmux.conf "/home/${user}/.tmux.conf"
+cp -lf ./tmux/.tmux.conf "/home/${user}/.tmux.conf"
 
 # Neovim
 nvimconfig="/home/${user}/.config/nvim/"
-if [ -d "${nvimconfig}" ]; then
-  rm -rf ${nvimconfig}
+if [ ! -d "${nvimconfig}" ]; then
   mkdir ${nvimconfig}
-  cp -l ./nvim/init.lua ~/.config/nvim/init.lua
 fi
+cp -lf ./nvim/init.lua ~/.config/nvim/init.lua
 
 # Ghostty
 ghosttyconfig="/home/${user}/.config/ghostty/"
-if [ -d "${ghosttyconfig}" ]; then
-  rm -rf ${ghosttyconfig}
+if [ ! -d "${ghosttyconfig}" ]; then
   mkdir ${ghosttyconfig}
-  cp -l ./ghostty/config ~/.config/ghostty/config
-  cp -l ./ghostty/startup.sh ~/.config/ghostty/startup.sh
-  chmod +x ~/.config/ghostty/startup.sh
 fi
+cp -lf ./ghostty/config ~/.config/ghostty/config
+cp -lf ./ghostty/startup.sh ~/.config/ghostty/startup.sh
+chmod +x ~/.config/ghostty/startup.sh
 
 # Fish
 fishconfig="/home/${user}/.config/fish/"
-if [ -d "${fishconfig}" ]; then
-  rm -rf ${fishconfig}
+if [ ! -d "${fishconfig}" ]; then
   mkdir ${fishconfig}
-  cp -l ./fish/config.fish ~/.config/fish/config.fish
-  cp -l ./fish/prompt.fish ~/.config/fish/prompt.fish
-  cp -l ./fish/fish_variables ~/.config/fish/fish_variables
 fi
+cp -lf ./fish/config.fish ~/.config/fish/config.fish
+cp -lf ./fish/prompt.fish ~/.config/fish/prompt.fish
+cp -lf ./fish/fish_variables ~/.config/fish/fish_variables
 
 # Dunst
 dunstconfig="/home/${user}/.config/dunst/"
-if [ -d "${dunstconfig}" ]; then
-  rm -rf ${dunstconfig}
+if [ ! -d "${dunstconfig}" ]; then
   mkdir ${dunstconfig}
-  cp -l ./dunst/dunstrc ~/.config/dunst/dunstrc
 fi
+cp -lf ./dunst/dunstrc ~/.config/dunst/dunstrc

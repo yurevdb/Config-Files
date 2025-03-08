@@ -18,6 +18,6 @@ volume master {
 }
 
 time {
-	format = "<span background='#191724' foreground='#e0def4'> %H:%M - %d %b </span>"
+	format = "<span background='#191724' foreground='#e0def4'>   %H:%M </span>"
 }
 
