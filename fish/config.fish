@@ -1,7 +1,6 @@
 ### GLOBAL VARIABLES
 #
 
-#set -x GOPATH /usr/local/go/libs
 set -x PATH $PATH /usr/local/go/bin
 
 # Load private config

@@ -14,12 +14,12 @@ assign [class="^apple-music-for-linux$"] 2:II
 assign [class="^steam$"] 3:III
 
 # autostart
-exec --no-startup-id feh --bg-scale "~/.config/wallpaper.png"
+exec --no-startup-id "feh --bg-scale /home/$(whoami)/.config/wallpaper.png"
 exec --no-startup-id dunst &
 exec --no-startup-id "solaar --window=hide"
 
 # start dmenu (a program launcher)
-bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
+bindsym $super+f exec i3-dmenu-desktop --dmenu="dmenu -i -b \
 -fn 'Poppins:size=15' -nb '#191724' -nf '#e0def4' \
 -sb '#f6c177' -sf '#191724'"
 
@@ -62,7 +62,7 @@ bindsym $super+v split v
 bindsym $super+s layout toggle split
 
 # enter fullscreen mode for the focused container
-bindsym $super+f fullscreen toggle
+#bindsym $super+f fullscreen toggle
 
 # switch to workspace
 bindsym $super+Control+Right workspace next
@@ -107,7 +107,7 @@ bar {
 	colors {
     background #191724
     statusline #191724
-    separator #191724
+    separator #e0def4
 
     # colour of border, background, and text
     focused_workspace #191724 #f6c177 #191724
