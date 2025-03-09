@@ -77,7 +77,6 @@ local lsp_keymaps = function()
   vim.keymap.set('i', '<C-.>', '<C-X><C-O>')
 end
 
-
 require('lazy').setup({
   {
     "williamboman/mason.nvim",
@@ -140,6 +139,7 @@ require('lazy').setup({
         require('lspconfig').gopls.setup({
           on_attach = lsp_keymaps(),
           capabilities = capabilities,
+          single_file_support = true,
           cmd = {"gopls"},
           filetypes = {"go", "gomod", "gowork", "gotmpl"},
         })
@@ -171,7 +171,7 @@ require('lazy').setup({
           "zig",
           "go",
         },
-        auto_install = false,
+        auto_install = true,
         sync_install = true,
         highlights = {
           enable = true
@@ -201,8 +201,8 @@ require('lazy').setup({
         options = {
           icons_enabled = true,
           theme = 'rose-pine',
-          component_seperators = '|',
           section_seperators = '',
+          component_seperators = '',
         },
         sections = {
           lualine_a = { 'mode' },
@@ -236,9 +236,6 @@ require('lazy').setup({
 
       require('rose-pine').setup({
         highlight_groups = {
-          Cursor = {
-            bg = 'gold',
-          }
         },
         before_highlight = {},
         dark_variant = {},

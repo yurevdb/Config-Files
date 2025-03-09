@@ -2,6 +2,8 @@
 #
 
 set -x PATH $PATH /usr/local/go/bin
+set -x EDITOR nvim
+set -x VISUAL nvim
 
 # Load private config
 # (local settings or computer specific config for example)

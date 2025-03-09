@@ -17,6 +17,8 @@ assign [class="^steam$"] 3:III
 exec --no-startup-id "feh --bg-scale /home/$(whoami)/.config/wallpaper.png"
 exec --no-startup-id dunst &
 exec --no-startup-id "solaar --window=hide"
+# Needed because gopls doesn´t know when to start :(
+exec --no-startup-id gopls &
 
 # start dmenu (a program launcher)
 bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
