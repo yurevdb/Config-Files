@@ -30,7 +30,7 @@ bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i
 
 # common apps keybinds
 bindsym $super+t exec ghostty
-bindsym $super+l exec i3lock -i ~/.config/wallpaper.png
+bindsym $super+l exec i3lock -i ~/.config/wallpaper.jpg
 bindsym $super+w exec opera
 bindsym $super+e exec thunar
 
