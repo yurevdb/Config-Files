@@ -53,16 +53,16 @@ fi
 # install feh
 wallpaper="${config}/wallpaper.png"
 cp -f ./wallpaper.png ${wallpaper}
-feh --bg-scale ${wallpaper}
+feh --bg-fill ${wallpaper}
 
 # i3 configs
-i3config="/home/${user}/.config/i3/"
+i3config="${config}g/i3/"
 if [ ! -d "${i3config}" ]; then
   mkdir ${i3config}
 fi
 cp -lf ./i3/config ~/.config/i3/config
 
-i3statuconfigs="/home/${user}/.config/i3status/"
+i3statuconfigs="${config}/i3status/"
 if [ ! -d "${i3statusconfig}" ]; then
   mkdir ${i3statusconfig}
 fi
@@ -73,14 +73,14 @@ rm "/home/${user}/.tmux.conf"
 cp -lf ./tmux/.tmux.conf "/home/${user}/.tmux.conf"
 
 # Neovim
-nvimconfig="/home/${user}/.config/nvim/"
+nvimconfig="${config}/nvim/"
 if [ ! -d "${nvimconfig}" ]; then
   mkdir ${nvimconfig}
 fi
 cp -lf ./nvim/init.lua ~/.config/nvim/init.lua
 
 # Ghostty
-ghosttyconfig="/home/${user}/.config/ghostty/"
+ghosttyconfig="/${config}/ghostty/"
 if [ ! -d "${ghosttyconfig}" ]; then
   mkdir ${ghosttyconfig}
 fi
@@ -89,7 +89,7 @@ cp -lf ./ghostty/startup.sh ~/.config/ghostty/startup.sh
 chmod +x ~/.config/ghostty/startup.sh
 
 # Fish
-fishconfig="/home/${user}/.config/fish/"
+fishconfig="/${config}/fish/"
 if [ ! -d "${fishconfig}" ]; then
   mkdir ${fishconfig}
 fi
@@ -98,7 +98,7 @@ cp -lf ./fish/prompt.fish ~/.config/fish/prompt.fish
 cp -lf ./fish/fish_variables ~/.config/fish/fish_variables
 
 # Dunst
-dunstconfig="/home/${user}/.config/dunst/"
+dunstconfig="/${config}/dunst/"
 if [ ! -d "${dunstconfig}" ]; then
   mkdir ${dunstconfig}
 fi

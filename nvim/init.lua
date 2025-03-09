@@ -140,7 +140,6 @@ require('lazy').setup({
           on_attach = lsp_keymaps(),
           capabilities = capabilities,
           single_file_support = true,
-          cmd = {"gopls"},
           filetypes = {"go", "gomod", "gowork", "gotmpl"},
         })
       end

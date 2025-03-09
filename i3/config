@@ -14,7 +14,7 @@ assign [class="^apple-music-for-linux$"] 2:II
 assign [class="^steam$"] 3:III
 
 # autostart
-exec --no-startup-id "feh --bg-scale /home/$(whoami)/.config/wallpaper.png"
+exec --no-startup-id "feh --bg-fill /home/$(whoami)/.config/wallpaper.jpg"
 exec --no-startup-id dunst &
 exec --no-startup-id "solaar --window=hide"
 # Needed because gopls doesn´t know when to start :(
