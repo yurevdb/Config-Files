@@ -51,8 +51,9 @@ fi
 
 # set wallpaper
 # install feh
-wallpaper="${config}/wallpaper.png"
-cp -f ./wallpaper.png ${wallpaper}
+# TODO: check user display resolution??
+wallpaper="${config}/wallpaper_4k.png"
+cp -f ./wallpaper_4k.png ${wallpaper}
 feh --bg-fill ${wallpaper}
 
 # i3 configs

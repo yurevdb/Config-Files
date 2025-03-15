@@ -104,7 +104,7 @@ require('lazy').setup({
       fuzzy = { implementation = "lua" },
     },
   },
-  -- LSP config
+  --LSP config
   {
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -140,7 +140,8 @@ require('lazy').setup({
           on_attach = lsp_keymaps(),
           capabilities = capabilities,
           single_file_support = true,
-          filetypes = {"go", "gomod", "gowork", "gotmpl"},
+          cmd = { "gopls" },
+          filetypes = { "go", "gomod", "gowork", "gotmpl" },
         })
       end
       -- Zig
@@ -179,6 +180,9 @@ require('lazy').setup({
         modules = {},
       }
     end,
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-context',
   },
   {
     'nvim-telescope/telescope.nvim',
