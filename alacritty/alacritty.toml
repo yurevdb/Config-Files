@@ -1,6 +1,9 @@
 [shell]
 program = "tmux"
 
+[window]
+padding = { x = 2, y = 2 }
+
 [font]
 size = 12
 
