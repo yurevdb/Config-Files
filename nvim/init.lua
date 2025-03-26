@@ -46,10 +46,10 @@ vim.keymap.set('n', '<leader>e', ':e .<CR>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<M-n>', '<cmd>cnext<CR>')
-vim.keymap.set('n', '<M-p>', '<cmd>cprev<CR>')
-vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
-vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>')
+vim.keymap.set('n', '<C-n>', '<cmd>cnext<CR>')
+vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>')
+--vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>')
+--vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>')
 vim.keymap.set('n', '<space>x', ':.lua<CR>')
 vim.keymap.set('v', '<space>x', ':lua<CR>')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
@@ -73,6 +73,7 @@ local lsp_keymaps = function()
   vim.keymap.set('n', 'J', vim.diagnostic.open_float)
   vim.keymap.set('n', 'gra', vim.lsp.buf.code_action)
   vim.keymap.set('n', 'grr', vim.lsp.buf.references)
+  vim.keymap.set('n', 'gri', vim.lsp.buf.implementation)
   vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help)
   vim.keymap.set('i', '<C-.>', '<C-X><C-O>')
 end
@@ -209,7 +210,7 @@ require('lazy').setup({
         },
         sections = {
           lualine_a = { 'mode' },
-          lualine_b = { 'buffers' },
+          lualine_b = { 'filename' },
           lualine_c = { 'branch', 'diff', 'diagnostics' },
           lualine_x = { 'filetype' },
           lualine_y = { 'progress' },

@@ -29,7 +29,7 @@ bindsym $super+d exec i3-dmenu-desktop --dmenu="dmenu -i -b \
 bindsym $super+Shift+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'
 
 # common apps keybinds
-bindsym $super+t exec ghostty
+bindsym $super+t exec alacritty
 bindsym $super+l exec "i3lock -i /home/$(whoami)/.config/wallpaper_4k.png"
 bindsym $super+w exec firefox
 bindsym $super+e exec thunar

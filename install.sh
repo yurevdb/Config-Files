@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "This install script will override the config files for i3, tmux, neovim, ghostty, fish and dunst."
+echo "This install script will override the config files for i3, tmux, neovim, alacritty, fish and dunst."
 echo "Backup your existsing configs in a different place to be safe."
 read -p "Do you want to continue? [y/n]: " yn
 if [ $yn = [Nn]* ]; then
@@ -57,13 +57,13 @@ cp -f ./wallpaper_4k.png ${wallpaper}
 feh --bg-fill ${wallpaper}
 
 # i3 configs
-i3config="${config}g/i3/"
+i3config="${config}/i3/"
 if [ ! -d "${i3config}" ]; then
   mkdir ${i3config}
 fi
 cp -lf ./i3/config ~/.config/i3/config
 
-i3statuconfigs="${config}/i3status/"
+i3statusconfig="${config}/i3status/"
 if [ ! -d "${i3statusconfig}" ]; then
   mkdir ${i3statusconfig}
 fi
@@ -81,13 +81,13 @@ fi
 cp -lf ./nvim/init.lua ~/.config/nvim/init.lua
 
 # Ghostty
-ghosttyconfig="/${config}/ghostty/"
-if [ ! -d "${ghosttyconfig}" ]; then
-  mkdir ${ghosttyconfig}
-fi
-cp -lf ./ghostty/config ~/.config/ghostty/config
-cp -lf ./ghostty/startup.sh ~/.config/ghostty/startup.sh
-chmod +x ~/.config/ghostty/startup.sh
+# ghosttyconfig="/${config}/ghostty/"
+# if [ ! -d "${ghosttyconfig}" ]; then
+#   mkdir ${ghosttyconfig}
+# fi
+# cp -lf ./ghostty/config ~/.config/ghostty/config
+# cp -lf ./ghostty/startup.sh ~/.config/ghostty/startup.sh
+# chmod +x ~/.config/ghostty/startup.sh
 
 # Fish
 fishconfig="/${config}/fish/"
@@ -104,3 +104,10 @@ if [ ! -d "${dunstconfig}" ]; then
   mkdir ${dunstconfig}
 fi
 cp -lf ./dunst/dunstrc ~/.config/dunst/dunstrc
+
+# Alacritty
+alacrittyconfig="/${config}/alacritty/"
+if [ ! -d "${alacrittyconfig}" ]; then
+  mkdir ${alacrittyconfig}
+fi
+cp -lf ./alacritty/alacritty.toml ${alacrittyconfig}alacritty.toml
