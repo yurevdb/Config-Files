@@ -6,7 +6,7 @@ size = 14
 
 [colors.primary]
 foreground = "#e0def4"
-background = "#191724"
+background = "#26233a"
 dim_foreground = "#908caa"
 bright_foreground = "#e0def4"
 
