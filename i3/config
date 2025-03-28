@@ -9,7 +9,6 @@ font pango:Ionicons 10, Poppins Regular 10
 floating_modifier $super
 
 # assign applications to certain workspaces
-assign [class="^Opera|firefox$"] 1:I
 assign [class="^apple-music-for-linux$"] 2:II
 assign [class="^steam$"] 3:III
 
