@@ -71,11 +71,10 @@ local lsp_keymaps = function()
   vim.keymap.set('n', 'K', vim.lsp.buf.hover)
   vim.keymap.set('n', 'R', vim.lsp.buf.rename)
   vim.keymap.set('n', 'J', vim.diagnostic.open_float)
-  vim.keymap.set('n', 'gra', vim.lsp.buf.code_action)
-  vim.keymap.set('n', 'grr', vim.lsp.buf.references)
-  vim.keymap.set('n', 'gri', vim.lsp.buf.implementation)
-  vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help)
-  vim.keymap.set('i', '<C-.>', '<C-X><C-O>')
+  vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action)
+  vim.keymap.set('n', '<Leader>gr', vim.lsp.buf.references)
+  vim.keymap.set('n', '<Leader>gi', vim.lsp.buf.implementation)
+  vim.keymap.set('n', '<Leader>gd', vim.lsp.buf.definition)
 end
 
 require('lazy').setup({
@@ -93,7 +92,7 @@ require('lazy').setup({
   },
   {
     "saghen/blink.cmp",
-    dependencies = { 
+    dependencies = {
       "rafamadriz/friendly-snippets",
     },
     opts = {

@@ -3,7 +3,7 @@
 Applications used: 
 - i3
 - Dunst
-- Ghostty
+- Alacritty
 - Tmux
 - Fish
 - Neovim
